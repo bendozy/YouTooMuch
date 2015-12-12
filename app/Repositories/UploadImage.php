@@ -73,4 +73,9 @@ class UploadImage
 	{
 		return $this->shortener->shortenUrl($longUrl);
 	}
+
+	public function getShortUrl()
+	{
+		return $this->shortUrl;
+	}
 }
