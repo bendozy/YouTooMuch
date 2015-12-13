@@ -9,13 +9,9 @@ use App\Http\Controllers\Controller;
 
 class UploadController extends Controller
 {
-    
-
-
     public function uplaod(Request $request, UploadImage $uploader)
     {
         if ($request->ajax()) {
-
             if ($request['image']) {
                 $file   = $request['image'];
 
