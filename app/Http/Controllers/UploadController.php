@@ -9,6 +9,14 @@ use App\Http\Controllers\Controller;
 
 class UploadController extends Controller
 {
+
+
+
+    /**
+     * @param  Request     $request  
+     * @param  UploadImage $uploader 
+     * @return mixed
+     */
     public function uplaod(Request $request, UploadImage $uploader)
     {
         if ($request->ajax()) {
