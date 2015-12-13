@@ -29,7 +29,7 @@ class UploadImage
 	 * @param Uploader     $uploader  
 	 * @param UrlShortener $shortener 
 	 */
-	public function __construct(Uploader $uploader,UrlShortener $shortener)
+	public function __construct(Uploader $uploader, UrlShortener $shortener)
 	{
 		$this->shortener 	= $shortener;
 		$this->uploader 	= $uploader;
@@ -41,6 +41,7 @@ class UploadImage
 	 */
 	public function intConfig()
 	{
+		
 		$this->shortener->setLogin(env('BITLY_LOGIN'));
 		$this->shortener->setKey(env('BITLY_API_KEY'));
 		$this->shortener->setFormat('json');
@@ -53,14 +54,12 @@ class UploadImage
 	 */
 	public function upload($image)
 	{
+		$this->intConfig();
+
 		if (! is_null($image)) {
-			$result = $this->uploader->upload($image);
-
-			$longUrl = $result['url'];
-
-			return  $this->shortenUrl($longUrl);
-
-
+			$result 	= $this->uploader->upload($image);
+			$longUrl 	= $result['url'];
+			$this->shortUrl =   $this->shortenUrl($longUrl);
 		}
 	}
 
