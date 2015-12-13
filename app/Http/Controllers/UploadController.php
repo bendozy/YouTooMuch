@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 use App\Http\Requests;
+use App\Helpers\UploadImage;
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 class UploadController extends Controller
@@ -12,17 +12,16 @@ class UploadController extends Controller
     
 
 
-    public function uplaod(Request $request, UploadImage $uplaoder)
+    public function uplaod(Request $request, UploadImage $uploader)
     {
-
         if ($request->ajax()) {
 
             if ($request['image']) {
-                $file = $request['image'];
+                $file   = $request['image'];
 
                 $uploader->upload($file);
-
-                $url = $uploader->getShortUrl();
+                
+                $url    = $uploader->getShortUrl();
 
                 return response()->json(['url' => $url]);
             }
