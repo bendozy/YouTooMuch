@@ -9,7 +9,6 @@ class UrlShortener
  	 * bit.ly api version
  	 * @var string
  	 */
-
      private $apiVersion = 'v3';
 
      /**
