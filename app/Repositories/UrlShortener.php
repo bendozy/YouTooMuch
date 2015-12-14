@@ -4,6 +4,7 @@ namespace App\Helpers;
 
 class UrlShortener
 {
+
  	 /**
  	 * bit.ly api version
  	 * @var string

@@ -11,12 +11,15 @@ class UploadController extends Controller
 {
 
 
+<<<<<<< HEAD
 
     /**
      * @param  Request     $request  
      * @param  UploadImage $uploader 
      * @return mixed
      */
+=======
+>>>>>>> e95f74d... Complete image upload feature with test file
     public function uplaod(Request $request, UploadImage $uploader)
     {
         if ($request->ajax()) {
