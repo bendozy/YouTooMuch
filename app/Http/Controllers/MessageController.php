@@ -35,7 +35,9 @@ class MessageController extends Controller
      */
     public function store(Request $request)
     {
-	    Message::create(['message' => $request['message']]);
+	    if (isset($request['message'])) {
+		    Message::create(['message' => $request['message']]);
+	    }
     }
 
     /**
