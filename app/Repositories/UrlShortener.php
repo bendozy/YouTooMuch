@@ -70,9 +70,7 @@ class UrlShortener
 
         $bitlyUrl      = "http://api.bit.ly/shorten?version=".$this->apiVersion."&format=".$this->format."&longUrl=".$encodedUrl."&login=".$this->login."&apiKey=".$this->apiKey;
 
-
         $content       = file_get_contents($bitlyUrl);
-
 
         try {
             return $this->parseContent($content, $url);
