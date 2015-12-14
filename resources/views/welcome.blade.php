@@ -38,7 +38,9 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Laravel 5</div>
+                <div class="login">
+                    <a href="login">Login with facebook</a>
+                </div>
             </div>
         </div>
     </body>
