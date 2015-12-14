@@ -4,6 +4,7 @@ namespace App\Helpers;
 
 class UrlShortener
 {
+    
 
  	 /**
  	 * bit.ly api version
@@ -53,9 +54,6 @@ class UrlShortener
      * @param string $format
      */
      public function setFormat($format)
-    {
-        $this->format = $format;
-    }
 
      /**
      * 
@@ -70,11 +68,13 @@ class UrlShortener
 
         $content       = file_get_contents($bitlyUrl);
 
+
         try {
             return $this->parseContent($content, $url);
         } catch (Exception $e) {
             return "Caught exception ". $e->getMessage().".";
         }
+
      }
 
      /**
@@ -96,6 +96,7 @@ class UrlShortener
      */
      public function parseContent($content, $key)
      {
+
         $content    = json_decode($content, true);
 
         if ($content['statusCode'] != 'OK') {
@@ -104,5 +105,7 @@ class UrlShortener
 
         $shortUrl    = $content['results'][$key]['shortUrl'];
         return (isset($shortUrl))? $shortUrl : "Error: Url not found ".$key;
+
      }
+
 }

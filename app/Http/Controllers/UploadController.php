@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 
 class UploadController extends Controller
 {
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -20,6 +21,8 @@ class UploadController extends Controller
      */
 =======
 >>>>>>> e95f74d... Complete image upload feature with test file
+=======
+>>>>>>> bfd1db8... Reformat code
     public function uplaod(Request $request, UploadImage $uploader)
     {
         if ($request->ajax()) {
