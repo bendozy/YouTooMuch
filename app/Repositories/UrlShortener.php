@@ -5,6 +5,7 @@ namespace App\Helpers;
 class UrlShortener
 {    
 
+
  	 /**
  	 * bit.ly api version
  	 * @var string
@@ -54,6 +55,10 @@ class UrlShortener
      */
      public function setFormat($format)
 
+    {
+        $this->format = $format;
+    }
+
      /**
      * 
      * @param  string $url 
@@ -77,6 +82,7 @@ class UrlShortener
 
      }
 
+
      /**
      * 
      * @param  string $url 
@@ -84,7 +90,6 @@ class UrlShortener
      */
      private function parseUrl($url)
      {
-
         $parsedUrl        = parse_url($url);
         return trim($parsedUrl['path'], '/');
      }
@@ -95,10 +100,8 @@ class UrlShortener
      * @param  string $key
      * @return string
      */
-
      public function parseContent($content, $key)
      {
-
 
         $content    = json_decode($content, true);
 
