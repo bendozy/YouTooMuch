@@ -4,8 +4,7 @@ namespace App\Helpers;
 
 class UrlShortener
 {    
-
-
+    
  	 /**
  	 * bit.ly api version
  	 * @var string
@@ -70,6 +69,7 @@ class UrlShortener
         $encodedUrl    = urlencode($url);
 
         $bitlyUrl      = "http://api.bit.ly/shorten?version=".$this->apiVersion."&format=".$this->format."&longUrl=".$encodedUrl."&login=".$this->login."&apiKey=".$this->apiKey;
+
 
         $content       = file_get_contents($bitlyUrl);
 
