@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::post('/upload', 'UploadController@uplaod');
+
+Route::get('/upload', function(){
+	return view('upload');
+});
