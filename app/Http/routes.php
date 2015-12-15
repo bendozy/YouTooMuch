@@ -15,4 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/templates', function () {
+    return view('templates');
+});
+
 Route::post('/upload', 'UploadController@upload');
