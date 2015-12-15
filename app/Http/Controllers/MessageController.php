@@ -35,9 +35,13 @@ class MessageController extends Controller
      */
     public function store(Request $request)
     {
+	    $user = null;
+
 	    if (isset($request['message'])) {
-		    Message::create(['message' => $request['message']]);
+		    $user = Message::create(['message' => $request['message']]);
 	    }
+
+	    return json_encode(['message' => is_null($user) ? 'Failed' : 'Success']);
     }
 
     /**
