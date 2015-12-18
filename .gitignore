@@ -4,3 +4,5 @@ vendor/
 .gitignore
 .DS_Store
 .gitattributes
+/vendor
+.env
