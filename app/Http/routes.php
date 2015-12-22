@@ -20,3 +20,8 @@ Route::get('/templates', function () {
 });
 
 Route::post('/upload', 'UploadController@upload');
+
+Route::get('/login', 'Auth\AuthController@facebookLogin');
+Route::get('/facebook', 'Auth\AuthController@handleProviderCallback');
+
+Route::get('/home', 'HomeController@index');
