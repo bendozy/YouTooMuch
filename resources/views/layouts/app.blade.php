@@ -13,9 +13,11 @@
     <title>U2Much</title>
 
     <!-- Bootstrap Core CSS -->
+    <link href="{{ secure_asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Custom CSS -->
+    <link href="{{ secure_asset('css/heroic-features.css') }}" rel="stylesheet">
     <link href="{{ asset('css/heroic-features.css') }}" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -32,11 +34,11 @@
 	</section>
     @include('includes.footer')
     <!-- jQuery -->
-    <script src="{{ asset('js/jquery.js') }}"></script>
+    <script src="{{ secure_asset('js/jquery.js') }}"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+    <script src="{{ secure_asset('js/bootstrap.min.js') }}"></script>
 
-    <script type="text/javascript" src="{{ asset('js/uploadtest.js') }}"></script>
+    <script src="{{ secure_asset('js/uploadtest.js') }}"></script>
 </body>
 </html>
