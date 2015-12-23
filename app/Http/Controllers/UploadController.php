@@ -16,6 +16,7 @@ class UploadController extends Controller
     {
         $this->image = $image;
     }
+    
     public function upload(Request $request, UploadImage $uploader)
     {
         if ($request->ajax()) {

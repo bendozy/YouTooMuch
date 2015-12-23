@@ -27,7 +27,6 @@
 
 </head>
 <body>
-    @include('includes.navbar')
 	<section>
 		@yield('content')
 	</section>
