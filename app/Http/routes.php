@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('app', function () {
-    return "hello facebook";
+    return view('welcome');
 });
 
 Route::get('app/templates', function () {
